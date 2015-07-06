@@ -1,0 +1,53 @@
+doctype html
+html(lang="en").no-js
+  block vars
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    block title
+      title Minimal Starter Kit
+
+    meta(name='description', content='Just another starter kit to help you prototype or build a website rapidly.')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    //- Theme color for Chrome 39+ on Android 5.0
+    meta(name="theme-color",content="#2A2C39")
+    
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300|Bree+Serif", type="text/css")
+    
+    //- Bower packages and css files are injected automatically
+    // build:css css/main.min.css 
+    //- bower:css
+    //- endinject
+    //- inject:css
+    //- endinject
+    // endbuild 
+    
+    // build:js js/modernizr.js 
+    script(src='../bower_components/modernizr/modernizr.js')
+    // endbuild 
+
+  body
+
+    include ../_includes/header.jade
+
+    main(role="main").main-content
+      block content
+
+    include ../_includes/footer.jade
+
+    //- Bower packages and javascript files are injected automatically
+
+    // build:js js/main.min.js 
+    //- bower:js
+    //- endinject
+    //- inject:js
+    //- endinject
+    // endbuild 
+
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //-
+      script.
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-XXXXX-X');ga('send','pageview');
+    

@@ -1,0 +1,95 @@
+$brand-color      = #DE5842;
+$background-color = #2A2C39;
+$text-color       = #E9E9EB
+
+body
+  font 0.875em/1.6 'Open Sans', sans-serif
+  color darken($text-color, 18%)
+  background $background-color
+  padding-top 40px
+
+  @media screen and (min-width: 600px)
+    padding-top 80px
+    font-size 1em
+
+a
+  padding-bottom 4px
+  text-decoration none
+  color $brand-color
+  transition all 150ms cubic-bezier(.17,.67,.83,.67)
+
+  &:hover
+    color $text-color
+
+small
+  font-size 0.750em
+
+.wrapper
+  max-width 620px
+  margin 0 auto
+  padding-left 20px
+  padding-right 20px
+
+.text--center
+  text-align center
+
+.main-content, .site-header, .site-footer
+  @extend .wrapper
+
+.site-footer
+  @extend .text--center
+
+.main-content
+  margin-bottom 40px
+
+.site-nav__list
+  list-style none
+  padding 0
+  margin 0
+
+.site-nav__item
+  display inline
+  margin 0 10px 0 0
+
+  & ~ .site-nav__item:before
+    content:"/"
+    margin-right 14px
+    color lighten($background-color, 20%)
+
+.site-nav__link:hover, .site-nav__link--selected
+  color $text-color
+  border-bottom 2px solid $text-color
+
+.site-header__text
+  font-family 'Bree Serif', serif
+  font-weight normal
+  font-size 2.571em
+  line-height 1.4
+  letter-spacing -0.0250em
+  color $text-color
+
+  @media screen and (min-width: 480px)
+    font-size 3.250em
+    margin 10px 0 0 0
+
+h2
+  font-size 1.125em
+  color $text-color
+
+.features__list
+  list-style-position inside
+  padding 0
+  margin-bottom 40px
+
+.btn
+  font-weight:bold
+  display block
+  padding 10px 24px
+  background $text-color
+  border-radius 4px
+
+  @media screen and (min-width: 480px)
+    display inline-block
+
+  &:hover
+    background $brand-color

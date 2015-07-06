@@ -1,0 +1,16 @@
+.btn {
+  font-weight: bold;
+  display: block;
+  padding: 10px 24px;
+  background: $text-color;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media screen and (min-width: $width-small) {
+    display: inline-block;
+  }
+
+  &:hover {
+    background: $brand-color;
+  }
+}
