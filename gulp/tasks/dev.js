@@ -6,7 +6,7 @@ var config      = require('../config');
 gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    ['bower', 'scripts', config.css.preprocessor, 'images', 'inject'],
+    ['bower', config.js.preprocessor, config.css.preprocessor, 'images', 'inject'],
     'jade',
     'watch',
     callback

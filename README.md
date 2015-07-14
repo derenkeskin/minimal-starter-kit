@@ -7,7 +7,7 @@ Just another starter kit to help you prototype or build a website rapidly.
 
 * Modular [Gulp](http://gulpjs.com/) tasks
 * Automated [Bower](http://bower.io/) library integration
-* [Stylus](https://learnboost.github.io/stylus/) / [Sass](http://sass-lang.com/) and [Jade](http://jade-lang.com/) support
+* [Stylus](https://learnboost.github.io/stylus/) / [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/) and [Jade](http://jade-lang.com/) support
 * [Autoprefixer](https://github.com/postcss/autoprefixer/) for CSS
 * HTML, CSS, JS and Images optimization
 * Cross-device Synchronization with [Browsersync](http://www.browsersync.io/)

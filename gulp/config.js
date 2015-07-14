@@ -6,11 +6,12 @@ module.exports = {
     src: [build]
   },
   watch: {
-    stylus:  src + '/stylus/*.styl',
-    sass:    src + '/scss/**/*.{sass,scss}',
-    jade:    src + '/**/*.jade',
-    scripts: src + '/js/**/*.js',
-    images:  src + '/img/**/*'
+    stylus:       src + '/stylus/*.styl',
+    sass:         src + '/scss/**/*.{sass,scss}',
+    jade:         src + '/**/*.jade',
+    javascript:   src + '/js/**/*.js',
+    coffeescript: src + '/coffee/**/*.coffee',
+    images:       src + '/img/**/*'
   },
   browsersync: {
     // http://www.browsersync.io/docs/options/#option-host
@@ -46,7 +47,7 @@ module.exports = {
     }
   },
   css: {
-    preprocessor: "stylus",
+    preprocessor: "stylus", // stylus or sass
     stylus: {
       src:  src   + "/stylus/*.styl",
       dest: build + "/css"
@@ -74,9 +75,16 @@ module.exports = {
       cascade: true
     }
   },
-  scripts: {
-    src:  src   + '/js/**/*.js',
-    dest: build + '/js'
+  js: {
+    preprocessor: "javascript", // javascript or coffeescript
+    javascript: {
+      src:  src   + '/js/**/*.js',
+      dest: build + '/js'
+    },
+    coffeescript: {
+      src:  src   + '/coffee/**/*.coffee',
+      dest: build + '/js'
+    }
   },
   inject: {
     layoutSrc:  src   + '/_layouts/*.jade',

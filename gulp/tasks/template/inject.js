@@ -6,7 +6,7 @@ var browserSync  = require('browser-sync');
 var config       = require('../../config');
 
 // Inject bower packages, compiled styles and scripts
-gulp.task('inject', ['bower', 'scripts', config.css.preprocessor], function () {
+gulp.task('inject', ['bower', config.js.preprocessor, config.css.preprocessor], function () {
   return gulp.src(config.inject.layoutSrc)
     .pipe(inject(gulp.src(bower(), {read: false}), {name: 'bower', relative: true, ignorePath: '../'}))
     .pipe(inject(es.merge(
